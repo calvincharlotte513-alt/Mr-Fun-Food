@@ -1,0 +1,6 @@
+{
+  "name": "MR FUN GIZZDODO",
+  "description": "Tastier Than Ever! Premium Nigerian Food Brand specializing in Gizdodo, traditional soups, smoky party jollof, local delicacies, and catering.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
