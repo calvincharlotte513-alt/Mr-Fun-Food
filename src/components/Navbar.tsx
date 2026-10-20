@@ -3,6 +3,7 @@ import { NavLink, Link, useLocation } from 'react-router-dom';
 import { Menu, X, ShoppingBag, MessageCircle } from 'lucide-react';
 import { BUSINESS_CONFIG } from '../data/config';
 import { useCart } from '../context/CartContext';
+import { SmartImage } from './SmartImage';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -48,11 +49,10 @@ export const Navbar: React.FC = () => {
             className="flex items-center gap-2.5 sm:gap-3 shrink-0 group focus-visible:outline-2 focus-visible:outline-[#EA580C] rounded-lg"
             aria-label="Mr Fun Food Republic Home"
           >
-            <img
+            <SmartImage
               src={BUSINESS_CONFIG.assets.logo}
               alt="Mr Fun Food Republic Official Brand Logo"
               className="h-10 w-10 sm:h-12 sm:w-12 object-contain rounded-full shadow-sm ring-1 ring-[#EA580C]/20 transition-transform duration-200 group-hover:scale-105"
-              referrerPolicy="no-referrer"
             />
             <div className="flex flex-col min-w-0">
               <span className="font-display text-sm sm:text-base lg:text-lg font-black tracking-tight text-[#23140C] uppercase leading-none whitespace-nowrap">

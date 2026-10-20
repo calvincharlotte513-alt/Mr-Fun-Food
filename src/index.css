@@ -2,58 +2,92 @@
 
 @layer base {
   :root {
-    --font-display: 'Outfit', sans-serif;
-    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     --color-brand-orange: #EA580C;
     --color-brand-orange-hover: #C2410C;
+    --color-brand-orange-glow: #FF6B00;
     --color-brand-brown: #23140C;
+    --color-brand-brown-deep: #160B06;
     --color-brand-brown-light: #3A2012;
-    --color-brand-cream: #FDF8F0;
-    --color-brand-cream-card: #F7EFE4;
+    --color-brand-cream: #FAF4EB;
+    --color-brand-cream-card: #F4EAD9;
   }
 
   body {
     font-family: var(--font-body);
     background-color: var(--color-brand-cream);
     color: var(--color-brand-brown);
+    letter-spacing: -0.01em;
   }
 
   h1, h2, h3, h4, h5, h6, .font-display {
     font-family: var(--font-display);
+    letter-spacing: -0.025em;
   }
+}
+
+/* Subtle luxury grain effect via CSS */
+.bg-grain {
+  background-image: radial-gradient(rgba(35, 20, 12, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
 }
 
 /* Custom subtle scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
 }
 ::-webkit-scrollbar-track {
-  background: #F5EBE1;
+  background: #F4EAD9;
 }
 ::-webkit-scrollbar-thumb {
-  background: #D97706;
-  border-radius: 4px;
+  background: #C2410C;
+  border-radius: 9999px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #B45309;
+  background: #9A3412;
 }
 
-@keyframes steamRise {
-  0% {
-    opacity: 0.2;
-    transform: translateY(0) scaleX(1);
+/* Luxury Editorial Hairline Rule */
+.hairline-b {
+  border-bottom: 1px solid rgba(58, 32, 18, 0.12);
+}
+.hairline-t {
+  border-top: 1px solid rgba(58, 32, 18, 0.12);
+}
+.hairline-all {
+  border: 1px solid rgba(58, 32, 18, 0.12);
+}
+
+/* Subtle ember pulse */
+@keyframes emberPulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(1);
   }
   50% {
-    opacity: 0.6;
-    transform: translateY(-8px) scaleX(1.1);
-  }
-  100% {
-    opacity: 0.2;
-    transform: translateY(-16px) scaleX(1);
+    opacity: 0.8;
+    transform: scale(1.05);
   }
 }
 
-.animate-steam {
-  animation: steamRise 3s ease-in-out infinite;
+.animate-ember {
+  animation: emberPulse 4s ease-in-out infinite;
 }
+
+/* Tasteful marquee for culinary ticker */
+@keyframes ticker {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker, .animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: ticker 26s linear infinite;
+}
+.animate-ticker:hover, .animate-marquee:hover {
+  animation-play-state: paused;
+}
+
