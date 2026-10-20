@@ -41,24 +41,24 @@ export const Navbar: React.FC = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between gap-6 md:gap-8">
+        <div className="flex items-center justify-between gap-3 sm:gap-6 md:gap-8">
           {/* Zone 1: Single element brand wordmark with official logo */}
           <Link
             to="/"
-            className="flex items-center gap-3 shrink-0 group focus-visible:outline-2 focus-visible:outline-[#EA580C] rounded-lg"
-            aria-label="Mr Fun Food Republic Hub Home"
+            className="flex items-center gap-2.5 sm:gap-3 shrink-0 group focus-visible:outline-2 focus-visible:outline-[#EA580C] rounded-lg"
+            aria-label="Mr Fun Food Republic Home"
           >
             <img
               src={BUSINESS_CONFIG.assets.logo}
-              alt="Mr Fun Food Republic Hub Official Brand Logo"
-              className="h-11 w-11 sm:h-12 sm:w-12 object-contain rounded-full shadow-sm ring-1 ring-[#EA580C]/20 transition-transform duration-200 group-hover:scale-105"
+              alt="Mr Fun Food Republic Official Brand Logo"
+              className="h-10 w-10 sm:h-12 sm:w-12 object-contain rounded-full shadow-sm ring-1 ring-[#EA580C]/20 transition-transform duration-200 group-hover:scale-105"
               referrerPolicy="no-referrer"
             />
-            <div className="flex flex-col">
-              <span className="font-display text-base sm:text-lg font-black tracking-tight text-[#23140C] uppercase leading-none">
-                MR FUN <span className="text-[#EA580C]">FOOD HUB</span>
+            <div className="flex flex-col min-w-0">
+              <span className="font-display text-sm sm:text-base lg:text-lg font-black tracking-tight text-[#23140C] uppercase leading-none whitespace-nowrap">
+                MR FUN <span className="text-[#EA580C]">FOOD REPUBLIC</span>
               </span>
-              <span className="text-[10px] sm:text-[11px] font-semibold text-[#8C5D3E] tracking-wider uppercase mt-0.5">
+              <span className="text-[9px] sm:text-[10px] lg:text-[11px] font-semibold text-[#8C5D3E] tracking-wider uppercase mt-0.5 whitespace-nowrap">
                 {BUSINESS_CONFIG.tagline}
               </span>
             </div>
